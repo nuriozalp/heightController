@@ -1,0 +1,19 @@
+<package>
+  <description brief="HeightController">
+
+     HeightController
+
+  </description>
+  <author>nuri</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/HeightController</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+ <depend package="geometry_msgs"/> 
+  <depend package="sensor_msgs"/>
+  <depend package="laser_geometry"/>
+  <depend package="nav_msgs" />
+</package>
+
+
