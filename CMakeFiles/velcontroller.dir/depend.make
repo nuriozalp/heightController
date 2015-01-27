@@ -3,9 +3,14 @@
 
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/XmlRpcDecl.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/XmlRpcValue.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Point.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Pose.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/PoseStamped.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Quaternion.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Twist.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/TwistStamped.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Vector3.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/nav_msgs/Path.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/ros/advertise_options.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/ros/advertise_service_options.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/ros/assert.h
