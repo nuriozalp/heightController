@@ -48,8 +48,7 @@ void trajectoryCallback(const nav_msgs::PathConstPtr& path) {
 						+ pow((path->poses[i + 1].pose.position.y - path->poses[i].pose.position.y), 2));
 
 	}
-	ROS_INFO("sum : %f", sum);
-
+	ROS_INFO("time => %f (second)--- total covered  => %d ",path->header.stamp.sec ,sum);
 }
 
 void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan_in) {
@@ -89,13 +88,13 @@ int main(int argc, char **argv) {
 
 	velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 10);
 
-	ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
+	//ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
 
-	ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
+	//ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
 
 	ros::Subscriber subMap = n.subscribe("/map", 10, scanMap);
 
-	//ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
+	ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
 
 	//ros::Subscriber subScan = n.subscribe("/scan", 10, scanCallback);
 
