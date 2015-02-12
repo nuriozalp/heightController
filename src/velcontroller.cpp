@@ -48,7 +48,7 @@ void trajectoryCallback(const nav_msgs::PathConstPtr& path) {
 						+ pow((path->poses[i + 1].pose.position.y - path->poses[i].pose.position.y), 2));
 
 	}
-	ROS_INFO("time => %f (second)--- total covered  => %d ",path->header.stamp.sec ,sum);
+	ROS_INFO("time => %f (second)--- total trajectory distance  => %d ",path->header.stamp.sec ,sum);
 }
 
 void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan_in) {
