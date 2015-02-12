@@ -77,7 +77,8 @@ void scanMap(const nav_msgs::OccupancyGridConstPtr & map) {
 			sum++;
 		}
 	}
-	ROS_INFO("time => %f (second)--- map-resolution => %f --- total covered  => %d ",map->header.stamp.sec ,map->info.resolution,sum);
+	ROS_INFO("time => %f (second)--- percantage of cover cell => %f --- total covered  => %d ",map->header.stamp.sec ,
+			((double)sum/map->data.size()),sum);
 
 }
 int main(int argc, char **argv) {
