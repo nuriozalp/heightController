@@ -11,6 +11,8 @@ CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o
  /opt/ros/hydro/include/geometry_msgs/Twist.h
  /opt/ros/hydro/include/geometry_msgs/TwistStamped.h
  /opt/ros/hydro/include/geometry_msgs/Vector3.h
+ /opt/ros/hydro/include/nav_msgs/MapMetaData.h
+ /opt/ros/hydro/include/nav_msgs/OccupancyGrid.h
  /opt/ros/hydro/include/nav_msgs/Path.h
  /opt/ros/hydro/include/ros/advertise_options.h
  /opt/ros/hydro/include/ros/advertise_service_options.h

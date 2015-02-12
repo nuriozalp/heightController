@@ -4,6 +4,7 @@
 #include "nav_msgs/Path.h"
 #include "std_msgs/String.h"
 #include <geometry_msgs/TwistStamped.h>
+#include <nav_msgs/OccupancyGrid.h>
 #include <sstream>
 #include "sensor_msgs/LaserScan.h"
 
@@ -69,7 +70,17 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan_in) {
 void cmdVel(const geometry_msgs::Twist &twist) {
 	twist_linear_x = twist.linear.x;
 }
+void scanMap(const nav_msgs::OccupancyGridConstPtr & map) {
 
+	int sum = 0;
+	for (int i = 0; i <map->data.size(); i++) {
+		if (map->data[i] == 0) {
+			sum++;
+		}
+	}
+	ROS_INFO("time => %f (second)--- map-resolution => %f --- total covered  => %d ",map->header.stamp.sec ,map->info.resolution,sum);
+
+}
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "tubitak_sonar_controller");
 	ros::NodeHandle n;
@@ -81,6 +92,8 @@ int main(int argc, char **argv) {
 	ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
 
 	ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
+
+	ros::Subscriber subMap = n.subscribe("/map", 10, scanMap);
 
 	//ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
 
