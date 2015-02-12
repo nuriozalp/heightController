@@ -87,13 +87,13 @@ int main(int argc, char **argv) {
 
 	cmd_vel_publisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
-	velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 10);
+	velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 1);
 
 	//ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
 
 	//ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
 
-	ros::Subscriber subMap = n.subscribe("/map", 10, scanMap);
+	ros::Subscriber subMap = n.subscribe("/map", 1, scanMap);
 
 	ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
 
