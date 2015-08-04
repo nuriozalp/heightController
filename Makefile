@@ -231,6 +231,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named gazeboModel
+
+# Build rule for target.
+gazeboModel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazeboModel
+.PHONY : gazeboModel
+
+# fast build rule for target.
+gazeboModel/fast:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/build
+.PHONY : gazeboModel/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -399,6 +412,30 @@ velcontroller/fast:
 	$(MAKE) -f CMakeFiles/velcontroller.dir/build.make CMakeFiles/velcontroller.dir/build
 .PHONY : velcontroller/fast
 
+src/gazeboModel.o: src/gazeboModel.cpp.o
+.PHONY : src/gazeboModel.o
+
+# target to build an object file
+src/gazeboModel.cpp.o:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o
+.PHONY : src/gazeboModel.cpp.o
+
+src/gazeboModel.i: src/gazeboModel.cpp.i
+.PHONY : src/gazeboModel.i
+
+# target to preprocess a source file
+src/gazeboModel.cpp.i:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.i
+.PHONY : src/gazeboModel.cpp.i
+
+src/gazeboModel.s: src/gazeboModel.cpp.s
+.PHONY : src/gazeboModel.s
+
+# target to generate assembly for a file
+src/gazeboModel.cpp.s:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.s
+.PHONY : src/gazeboModel.cpp.s
+
 src/velcontroller.o: src/velcontroller.cpp.o
 .PHONY : src/velcontroller.o
 
@@ -437,6 +474,7 @@ help:
 	@echo "... clean_test_results"
 	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... gazeboModel"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -455,6 +493,9 @@ help:
 	@echo "... test-results-run"
 	@echo "... tests"
 	@echo "... velcontroller"
+	@echo "... src/gazeboModel.o"
+	@echo "... src/gazeboModel.i"
+	@echo "... src/gazeboModel.s"
 	@echo "... src/velcontroller.o"
 	@echo "... src/velcontroller.i"
 	@echo "... src/velcontroller.s"

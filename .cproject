@@ -305,6 +305,34 @@
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
+<target name="[exe] gazeboModel" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j8</buildArguments>
+<buildTarget>gazeboModel</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] gazeboModel/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j8</buildArguments>
+<buildTarget>gazeboModel/fast</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Build" path="[Targets]/[exe] gazeboModel" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-C "/opt/ros/hydro/share/HeightController" -j8</buildArguments>
+<buildTarget>gazeboModel</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Clean" path="[Targets]/[exe] gazeboModel" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/cmake</buildCommand>
+<buildArguments>-E chdir "/opt/ros/hydro/share/HeightController" "/usr/bin/cmake" -P "CMakeFiles/gazeboModel.dir/cmake_clean.cmake"</buildArguments>
+<buildTarget></buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
 <target name=": install" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j8</buildArguments>
@@ -463,6 +491,27 @@
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j8</buildArguments>
 <buildTarget>clean</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] src/gazeboModel.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j8</buildArguments>
+<buildTarget>src/gazeboModel.cpp.o</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] src/gazeboModel.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j8</buildArguments>
+<buildTarget>src/gazeboModel.cpp.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] src/gazeboModel.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j8</buildArguments>
+<buildTarget>src/gazeboModel.cpp.s</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>

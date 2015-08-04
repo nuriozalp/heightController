@@ -270,6 +270,41 @@ clean: CMakeFiles/doxygen.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/gazeboModel.dir
+
+# All Build rule for target.
+CMakeFiles/gazeboModel.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/depend
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/share/HeightController/CMakeFiles  2
+	@echo "Built target gazeboModel"
+.PHONY : CMakeFiles/gazeboModel.dir/all
+
+# Include target in all.
+all: CMakeFiles/gazeboModel.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gazeboModel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/ros/hydro/share/HeightController/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gazeboModel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/ros/hydro/share/HeightController/CMakeFiles 0
+.PHONY : CMakeFiles/gazeboModel.dir/rule
+
+# Convenience name for target.
+gazeboModel: CMakeFiles/gazeboModel.dir/rule
+.PHONY : gazeboModel
+
+# clean rule for target.
+CMakeFiles/gazeboModel.dir/clean:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/clean
+.PHONY : CMakeFiles/gazeboModel.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/gazeboModel.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rosbuild_clean-test-results.dir
 
 # All Build rule for target.
@@ -650,7 +685,7 @@ clean: CMakeFiles/tests.dir/clean
 CMakeFiles/velcontroller.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/velcontroller.dir/build.make CMakeFiles/velcontroller.dir/depend
 	$(MAKE) -f CMakeFiles/velcontroller.dir/build.make CMakeFiles/velcontroller.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/share/HeightController/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/share/HeightController/CMakeFiles  3
 	@echo "Built target velcontroller"
 .PHONY : CMakeFiles/velcontroller.dir/all
 

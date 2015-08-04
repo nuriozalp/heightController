@@ -102,6 +102,10 @@ CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/tf2_r
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/tf/package.xml
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/laser_geometry/package.xml
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/nav_msgs/package.xml
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/rosbag_migration_rule/package.xml
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/trajectory_msgs/package.xml
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/std_srvs/package.xml
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/share/gazebo_msgs/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/share/HeightController/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o -c /opt/ros/hydro/share/HeightController/src/velcontroller.cpp

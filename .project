@@ -119,6 +119,41 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>[Targets]/[exe] gazeboModel</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/Source Files/gazeboModel.cpp</name>
+			<type>1</type>
+			<location>/opt/ros/hydro/share/HeightController/src/gazeboModel.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] gazeboModel/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>[Targets]/[exe] velcontroller</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
