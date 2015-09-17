@@ -11,6 +11,7 @@ SET(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 SET(CMAKE_TARGET_DEFINITIONS
   "ROS_PACKAGE_NAME=\"HeightController\""
+  "BOOST_CB_DISABLE_DEBUG"
   )
 
 # Targets to which this target links.

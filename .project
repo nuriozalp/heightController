@@ -139,6 +139,11 @@
 			<location>/opt/ros/hydro/share/HeightController/src/gazeboModel.cpp</location>
 		</link>
 		<link>
+			<name>[Targets]/[exe] gazeboModel/Source Files/frontier.cpp</name>
+			<type>1</type>
+			<location>/opt/ros/hydro/share/HeightController/src/frontier.cpp</location>
+		</link>
+		<link>
 			<name>[Targets]/[exe] gazeboModel/Header Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>

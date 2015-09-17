@@ -188,6 +188,9 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 //Doxygen found
 DOXYGEN_FOUND:BOOL=TRUE
 
+//Path to a file.
+EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 
@@ -226,6 +229,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a file.
 PROJECTCONFIG:FILEPATH=PROJECTCONFIG-NOTFOUND
@@ -267,10 +273,13 @@ UBUNTU_PRECISE:BOOL=TRUE
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/opt/ros/hydro/share/HeightController/src/gazeboModel.cpp
+_file_name:FILEPATH=/opt/ros/hydro/share/HeightController/src/frontier.cpp
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/hydro/share/catkin/cmake
+
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/hydro/share/cmake_modules/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/hydro/share/gencpp/cmake
@@ -439,6 +448,10 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: EIGEN_INCLUDE_DIR
+EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Details about finding Eigen
+FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.3()]
 GTEST_BOTH_LIBRARIES:INTERNAL=/usr/lib/libgtest.so;/usr/lib/libgtest_main.so
@@ -464,14 +477,51 @@ HeightController_LIBRARIES:INTERNAL=laser_geometry;tf;tf2_ros;actionlib;message_
 HeightController_LIBRARY_DIRS:INTERNAL=/opt/ros/hydro/lib
 HeightController_cached_manifest_list:INTERNAL=/opt/ros/hydro/share/HeightController/manifest.xml;/opt/ros/hydro/share/genmsg/package.xml;/opt/ros/hydro/share/genpy/package.xml;/opt/ros/hydro/share/catkin/package.xml;/opt/ros/hydro/share/console_bridge/package.xml;/opt/ros/hydro/share/cpp_common/package.xml;/opt/ros/hydro/share/rostime/package.xml;/opt/ros/hydro/share/roscpp_traits/package.xml;/opt/ros/hydro/share/roscpp_serialization/package.xml;/opt/ros/hydro/share/message_runtime/package.xml;/opt/ros/hydro/share/gencpp/package.xml;/opt/ros/hydro/share/genlisp/package.xml;/opt/ros/hydro/share/message_generation/package.xml;/opt/ros/hydro/share/rosbuild/package.xml;/opt/ros/hydro/share/rosconsole/package.xml;/opt/ros/hydro/share/std_msgs/package.xml;/opt/ros/hydro/share/rosgraph_msgs/package.xml;/opt/ros/hydro/share/xmlrpcpp/package.xml;/opt/ros/hydro/share/roscpp/package.xml;/opt/ros/hydro/share/rosgraph/package.xml;/opt/ros/hydro/share/rospack/package.xml;/opt/ros/hydro/share/roslib/package.xml;/opt/ros/hydro/share/rospy/package.xml;/opt/ros/hydro/share/geometry_msgs/package.xml;/opt/ros/hydro/share/sensor_msgs/package.xml;/opt/ros/hydro/share/angles/package.xml;/opt/ros/hydro/share/message_filters/package.xml;/opt/ros/hydro/share/rosclean/package.xml;/opt/ros/hydro/share/rosmaster/package.xml;/opt/ros/hydro/share/rosout/package.xml;/opt/ros/hydro/share/rosparam/package.xml;/opt/ros/hydro/share/roslaunch/package.xml;/opt/ros/hydro/share/rosbag_storage/package.xml;/opt/ros/hydro/share/topic_tools/package.xml;/opt/ros/hydro/share/rosbag/package.xml;/opt/ros/hydro/share/rostopic/package.xml;/opt/ros/hydro/share/rosnode/package.xml;/opt/ros/hydro/share/rosmsg/package.xml;/opt/ros/hydro/share/rosservice/package.xml;/opt/ros/hydro/share/roswtf/package.xml;/opt/ros/hydro/share/actionlib_msgs/package.xml;/opt/ros/hydro/share/tf2_msgs/package.xml;/opt/ros/hydro/share/tf2/package.xml;/opt/ros/hydro/share/rosunit/package.xml;/opt/ros/hydro/share/rostest/package.xml;/opt/ros/hydro/share/actionlib/package.xml;/opt/ros/hydro/share/tf2_py/package.xml;/opt/ros/hydro/share/tf2_ros/package.xml;/opt/ros/hydro/share/tf/package.xml;/opt/ros/hydro/share/laser_geometry/package.xml;/opt/ros/hydro/share/nav_msgs/package.xml;/opt/ros/hydro/share/rosbag_migration_rule/package.xml;/opt/ros/hydro/share/trajectory_msgs/package.xml;/opt/ros/hydro/share/std_srvs/package.xml;/opt/ros/hydro/share/gazebo_msgs/package.xml
 HeightController_temp:INTERNAL=
+PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_CFLAGS_I:INTERNAL=
+PC_EIGEN_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_FOUND:INTERNAL=1
+PC_EIGEN_INCLUDEDIR:INTERNAL=
+PC_EIGEN_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_LDFLAGS:INTERNAL=
+PC_EIGEN_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_LIBDIR:INTERNAL=
+PC_EIGEN_LIBRARIES:INTERNAL=
+PC_EIGEN_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_LIBS:INTERNAL=
+PC_EIGEN_LIBS_L:INTERNAL=
+PC_EIGEN_LIBS_OTHER:INTERNAL=
+PC_EIGEN_LIBS_PATHS:INTERNAL=
+PC_EIGEN_PREFIX:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_STATIC_CFLAGS_I:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_STATIC_LDFLAGS:INTERNAL=
+PC_EIGEN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBDIR:INTERNAL=
+PC_EIGEN_STATIC_LIBRARIES:INTERNAL=
+PC_EIGEN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_STATIC_LIBS:INTERNAL=
+PC_EIGEN_STATIC_LIBS_L:INTERNAL=
+PC_EIGEN_STATIC_LIBS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBS_PATHS:INTERNAL=
+PC_EIGEN_VERSION:INTERNAL=3.0.5
+PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
+PC_EIGEN_eigen3_LIBDIR:INTERNAL=
+PC_EIGEN_eigen3_PREFIX:INTERNAL=
+PC_EIGEN_eigen3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+__pkg_config_checked_PC_EIGEN:INTERNAL=1
 _rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1438676710.86
+_rosbuild_cached_flag_time:INTERNAL=1442382623.51
 _roslang_LANGS:INTERNAL=roseus;roslisp
 _rospack_deps_manifests_invoke_result:INTERNAL=/opt/ros/hydro/share/genmsg/package.xml;/opt/ros/hydro/share/genpy/package.xml;/opt/ros/hydro/share/catkin/package.xml;/opt/ros/hydro/share/console_bridge/package.xml;/opt/ros/hydro/share/cpp_common/package.xml;/opt/ros/hydro/share/rostime/package.xml;/opt/ros/hydro/share/roscpp_traits/package.xml;/opt/ros/hydro/share/roscpp_serialization/package.xml;/opt/ros/hydro/share/message_runtime/package.xml;/opt/ros/hydro/share/gencpp/package.xml;/opt/ros/hydro/share/genlisp/package.xml;/opt/ros/hydro/share/message_generation/package.xml;/opt/ros/hydro/share/rosbuild/package.xml;/opt/ros/hydro/share/rosconsole/package.xml;/opt/ros/hydro/share/std_msgs/package.xml;/opt/ros/hydro/share/rosgraph_msgs/package.xml;/opt/ros/hydro/share/xmlrpcpp/package.xml;/opt/ros/hydro/share/roscpp/package.xml;/opt/ros/hydro/share/rosgraph/package.xml;/opt/ros/hydro/share/rospack/package.xml;/opt/ros/hydro/share/roslib/package.xml;/opt/ros/hydro/share/rospy/package.xml;/opt/ros/hydro/share/geometry_msgs/package.xml;/opt/ros/hydro/share/sensor_msgs/package.xml;/opt/ros/hydro/share/angles/package.xml;/opt/ros/hydro/share/message_filters/package.xml;/opt/ros/hydro/share/rosclean/package.xml;/opt/ros/hydro/share/rosmaster/package.xml;/opt/ros/hydro/share/rosout/package.xml;/opt/ros/hydro/share/rosparam/package.xml;/opt/ros/hydro/share/roslaunch/package.xml;/opt/ros/hydro/share/rosbag_storage/package.xml;/opt/ros/hydro/share/topic_tools/package.xml;/opt/ros/hydro/share/rosbag/package.xml;/opt/ros/hydro/share/rostopic/package.xml;/opt/ros/hydro/share/rosnode/package.xml;/opt/ros/hydro/share/rosmsg/package.xml;/opt/ros/hydro/share/rosservice/package.xml;/opt/ros/hydro/share/roswtf/package.xml;/opt/ros/hydro/share/actionlib_msgs/package.xml;/opt/ros/hydro/share/tf2_msgs/package.xml;/opt/ros/hydro/share/tf2/package.xml;/opt/ros/hydro/share/rosunit/package.xml;/opt/ros/hydro/share/rostest/package.xml;/opt/ros/hydro/share/actionlib/package.xml;/opt/ros/hydro/share/tf2_py/package.xml;/opt/ros/hydro/share/tf2_ros/package.xml;/opt/ros/hydro/share/tf/package.xml;/opt/ros/hydro/share/laser_geometry/package.xml;/opt/ros/hydro/share/nav_msgs/package.xml;/opt/ros/hydro/share/rosbag_migration_rule/package.xml;/opt/ros/hydro/share/trajectory_msgs/package.xml;/opt/ros/hydro/share/std_srvs/package.xml;/opt/ros/hydro/share/gazebo_msgs/package.xml
 _rospack_msgsrv_gen_invoke_result:INTERNAL=

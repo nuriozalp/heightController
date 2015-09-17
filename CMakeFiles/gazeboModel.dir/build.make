@@ -127,14 +127,94 @@ CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o.provides: CMakeFiles/gazeboMode
 
 CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o.provides.build: CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o
 
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: CMakeFiles/gazeboModel.dir/flags.make
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: src/frontier.cpp
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: manifest.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/genmsg/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/genpy/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/catkin/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/console_bridge/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/cpp_common/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rostime/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roscpp_traits/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roscpp_serialization/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/message_runtime/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/gencpp/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/genlisp/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/message_generation/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosbuild/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosconsole/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/std_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosgraph_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/xmlrpcpp/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roscpp/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosgraph/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rospack/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roslib/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rospy/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/geometry_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/sensor_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/angles/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/message_filters/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosclean/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosmaster/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosout/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosparam/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roslaunch/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosbag_storage/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/topic_tools/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosbag/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rostopic/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosnode/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosmsg/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosservice/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/roswtf/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/actionlib_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/tf2_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/tf2/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosunit/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rostest/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/actionlib/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/tf2_py/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/tf2_ros/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/tf/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/laser_geometry/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/nav_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/rosbag_migration_rule/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/trajectory_msgs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/std_srvs/package.xml
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o: /opt/ros/hydro/share/gazebo_msgs/package.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /opt/ros/hydro/share/HeightController/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gazeboModel.dir/src/frontier.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/gazeboModel.dir/src/frontier.cpp.o -c /opt/ros/hydro/share/HeightController/src/frontier.cpp
+
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazeboModel.dir/src/frontier.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /opt/ros/hydro/share/HeightController/src/frontier.cpp > CMakeFiles/gazeboModel.dir/src/frontier.cpp.i
+
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazeboModel.dir/src/frontier.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /opt/ros/hydro/share/HeightController/src/frontier.cpp -o CMakeFiles/gazeboModel.dir/src/frontier.cpp.s
+
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.requires:
+.PHONY : CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.requires
+
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.provides: CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.provides.build
+.PHONY : CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.provides
+
+CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.provides.build: CMakeFiles/gazeboModel.dir/src/frontier.cpp.o
+
 # Object files for target gazeboModel
 gazeboModel_OBJECTS = \
-"CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o"
+"CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o" \
+"CMakeFiles/gazeboModel.dir/src/frontier.cpp.o"
 
 # External object files for target gazeboModel
 gazeboModel_EXTERNAL_OBJECTS =
 
 bin/gazeboModel: CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o
+bin/gazeboModel: CMakeFiles/gazeboModel.dir/src/frontier.cpp.o
 bin/gazeboModel: CMakeFiles/gazeboModel.dir/build.make
 bin/gazeboModel: CMakeFiles/gazeboModel.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/gazeboModel"
@@ -145,6 +225,7 @@ CMakeFiles/gazeboModel.dir/build: bin/gazeboModel
 .PHONY : CMakeFiles/gazeboModel.dir/build
 
 CMakeFiles/gazeboModel.dir/requires: CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.o.requires
+CMakeFiles/gazeboModel.dir/requires: CMakeFiles/gazeboModel.dir/src/frontier.cpp.o.requires
 .PHONY : CMakeFiles/gazeboModel.dir/requires
 
 CMakeFiles/gazeboModel.dir/clean:

@@ -7,6 +7,7 @@
 #include <nav_msgs/OccupancyGrid.h>
 #include <sstream>
 #include "sensor_msgs/LaserScan.h"
+#include <keyboard/Key.h>
 
 ros::Publisher cmd_vel_publisher;
 ros::Publisher velocity_stamp_publisher_;
@@ -18,24 +19,30 @@ double error = 0.0;
 double ref = 0.37;
 double linearZ = 0.0;
 float twist_linear_x = -1;
+
+void keyboardCallback(const keyboard::KeyConstPtr& keyconsptr) {
+	int key = keyconsptr->code;
+	ROS_INFO("key = %d ", key);
+
+}
 void sonarCallback(const sensor_msgs::Range& sonar) {
 
-    double error = (ref - sonar.range);
-    double kp = 0.5;
+	double error = (ref - sonar.range);
+	double kp = 0.5;
 
-    geometry_msgs::Twist twist;
-    if (twist_linear_x > -1)
-        twist.linear.x = twist_linear_x;
-    twist.linear.z = kp * error;
-    linearZ = kp * error;
-    ROS_INFO("kp*error : %f :", kp * error);
+	geometry_msgs::Twist twist;
+	if (twist_linear_x > -1)
+		twist.linear.x = twist_linear_x;
+	twist.linear.z = kp * error;
+	linearZ = kp * error;
+	ROS_INFO("kp*error : %f :", kp * error);
 
-    cmd_vel_publisher.publish(twist);
+	cmd_vel_publisher.publish(twist);
 
-    velocity_stamp.header.stamp = ros::Time::now();
-    velocity_stamp.twist.linear.x = twist.linear.x;
-    velocity_stamp.twist.angular.z = twist.angular.z;
-    velocity_stamp_publisher_.publish(velocity_stamp);
+	velocity_stamp.header.stamp = ros::Time::now();
+	velocity_stamp.twist.linear.x = twist.linear.x;
+	velocity_stamp.twist.angular.z = twist.angular.z;
+	velocity_stamp_publisher_.publish(velocity_stamp);
 
 }
 
@@ -48,7 +55,7 @@ void trajectoryCallback(const nav_msgs::PathConstPtr& path) {
 						+ pow((path->poses[i + 1].pose.position.y - path->poses[i].pose.position.y), 2));
 
 	}
-	ROS_INFO("time => %d (second)--- total trajectory distance  => %f ",path->header.stamp.sec ,sum);
+	ROS_INFO("time => %d (second)--- total trajectory distance  => %f ", path->header.stamp.sec, sum);
 }
 
 void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan_in) {
@@ -72,37 +79,38 @@ void cmdVel(const geometry_msgs::Twist &twist) {
 void scanMap(const nav_msgs::OccupancyGridConstPtr & map) {
 
 	int sum = 0;
-	for (unsigned  int i = 0; i <map->data.size(); i++) {
+	for (unsigned int i = 0; i < map->data.size(); i++) {
 		if (map->data[i] == 0) {
 			sum++;
 		}
 	}
-	ROS_INFO("time => %d (second)--- percantage of cover cell => %f --- total covered  => %d ",map->header.stamp.sec ,
-			((double)sum/map->data.size()),sum);
+	ROS_INFO("time => %d (second)--- percantage of cover cell => %f --- total covered  => %d ", map->header.stamp.sec,
+			((double )sum / map->data.size()), sum);
 
 }
 int main(int argc, char **argv) {
 	ros::init(argc, argv, "tubitak_sonar_controller");
 	ros::NodeHandle n;
 
-	cmd_vel_publisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
+	//cmd_vel_publisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
-	velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 1);
+	//velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 1);
 
-	ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
+	//ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
+	ros::Subscriber subKey = n.subscribe("/keyboard/keydown", 10, keyboardCallback);
 
 	//ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
 
-	ros::Subscriber subMap = n.subscribe("/map", 1, scanMap);
+	//ros::Subscriber subMap = n.subscribe("/map", 1, scanMap);
 
-	ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
+	//ros::Subscriber subTrajectory = n.subscribe("/trajectory", 1, trajectoryCallback);
 
 	//ros::Subscriber subScan = n.subscribe("/scan", 10, scanCallback);
 
 	ros::Rate r(10);
-		while (ros::ok()) {
-			ros::spinOnce();
-			r.sleep();
-		}
-		return 0;
+	while (ros::ok()) {
+		ros::spinOnce();
+		r.sleep();
+	}
+	return 0;
 }

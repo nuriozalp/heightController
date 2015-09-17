@@ -1,22 +1,23 @@
 <package>
-  <description brief="HeightController">
+	<description brief="HeightController">
 
-     HeightController
+		HeightController
 
-  </description>
-  <author>nuri</author>
-  <license>BSD</license>
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/HeightController</url>
-  <depend package="rospy"/>
-  <depend package="roscpp"/>
- <depend package="geometry_msgs"/> 
-  <depend package="sensor_msgs"/>
-  <depend package="laser_geometry"/>
-  <depend package="nav_msgs" />
-   <depend package="message_filters" />
-    <depend package="tf" />
-     <depend package="gazebo_msgs" />
+	</description>
+	<author>nuri</author>
+	<license>BSD</license>
+	<review status="unreviewed" notes="" />
+	<url>http://ros.org/wiki/HeightController</url>
+	<depend package="rospy" />
+	<depend package="roscpp" />
+	<depend package="geometry_msgs" />
+	<depend package="sensor_msgs" />
+	<depend package="laser_geometry" />
+	<depend package="nav_msgs" />
+	<depend package="message_filters" />
+	<depend package="tf" />
+	<depend package="gazebo_msgs" />
+	<rosdep name="eigen" />s
 </package>
 
 

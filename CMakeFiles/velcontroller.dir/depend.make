@@ -10,6 +10,7 @@ CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geo
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Twist.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/TwistStamped.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/geometry_msgs/Vector3.h
+CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/keyboard/Key.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/nav_msgs/MapMetaData.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/nav_msgs/OccupancyGrid.h
 CMakeFiles/velcontroller.dir/src/velcontroller.cpp.o: /opt/ros/hydro/include/nav_msgs/Path.h

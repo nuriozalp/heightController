@@ -412,6 +412,30 @@ velcontroller/fast:
 	$(MAKE) -f CMakeFiles/velcontroller.dir/build.make CMakeFiles/velcontroller.dir/build
 .PHONY : velcontroller/fast
 
+src/frontier.o: src/frontier.cpp.o
+.PHONY : src/frontier.o
+
+# target to build an object file
+src/frontier.cpp.o:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/frontier.cpp.o
+.PHONY : src/frontier.cpp.o
+
+src/frontier.i: src/frontier.cpp.i
+.PHONY : src/frontier.i
+
+# target to preprocess a source file
+src/frontier.cpp.i:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/frontier.cpp.i
+.PHONY : src/frontier.cpp.i
+
+src/frontier.s: src/frontier.cpp.s
+.PHONY : src/frontier.s
+
+# target to generate assembly for a file
+src/frontier.cpp.s:
+	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/frontier.cpp.s
+.PHONY : src/frontier.cpp.s
+
 src/gazeboModel.o: src/gazeboModel.cpp.o
 .PHONY : src/gazeboModel.o
 
@@ -493,6 +517,9 @@ help:
 	@echo "... test-results-run"
 	@echo "... tests"
 	@echo "... velcontroller"
+	@echo "... src/frontier.o"
+	@echo "... src/frontier.i"
+	@echo "... src/frontier.s"
 	@echo "... src/gazeboModel.o"
 	@echo "... src/gazeboModel.i"
 	@echo "... src/gazeboModel.s"
