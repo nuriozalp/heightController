@@ -75,6 +75,7 @@ void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan_in) {
 
 void cmdVel(const geometry_msgs::Twist &twist) {
 	twist_linear_x = twist.linear.x;
+	ROS_INFO("%f",twist_linear_x);
 }
 void scanMap(const nav_msgs::OccupancyGridConstPtr & map) {
 
@@ -92,14 +93,14 @@ int main(int argc, char **argv) {
 	ros::init(argc, argv, "tubitak_sonar_controller");
 	ros::NodeHandle n;
 
-	//cmd_vel_publisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
+	cmd_vel_publisher = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
-	//velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 1);
+	velocity_stamp_publisher_ = n.advertise<geometry_msgs::TwistStamped>("cmd_stamp_vel", 1);
 
-	//ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
-	ros::Subscriber subKey = n.subscribe("/keyboard/keydown", 10, keyboardCallback);
+	ros::Subscriber subPosition = n.subscribe("/sonar_height", 1, sonarCallback);
+	//ros::Subscriber subKey = n.subscribe("/keyboard/keydown", 10, keyboardCallback);
 
-	//ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
+	ros::Subscriber subTwist = n.subscribe("/cmd_vel", 10, cmdVel);
 
 	//ros::Subscriber subMap = n.subscribe("/map", 1, scanMap);
 
