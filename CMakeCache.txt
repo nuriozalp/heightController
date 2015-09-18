@@ -273,7 +273,7 @@ UBUNTU_PRECISE:BOOL=TRUE
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/opt/ros/hydro/share/HeightController/src/frontier.cpp
+_file_name:FILEPATH=/opt/ros/hydro/share/HeightController/src/gzbservice.cpp
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/hydro/share/catkin/cmake

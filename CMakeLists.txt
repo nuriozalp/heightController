@@ -37,7 +37,7 @@ rosbuild_add_boost_directories()
 #rosbuild_link_boost(${PROJECT_NAME} thread)
 rosbuild_add_executable(velcontroller src/velcontroller.cpp)
 rosbuild_add_executable(gazeboModel src/gazeboModel.cpp  src/frontier.cpp)
-
+rosbuild_add_executable(gzb src/gzbservice.cpp)
 #rosbuild_add_executable(filterChain src/filterChain.cpp)
 
 rosbuild_link_boost(gazeboModel thread signals system) 

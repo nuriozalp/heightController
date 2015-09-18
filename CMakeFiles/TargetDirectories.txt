@@ -6,6 +6,7 @@
 /opt/ros/hydro/share/HeightController/CMakeFiles/clean_test_results.dir
 /opt/ros/hydro/share/HeightController/CMakeFiles/doxygen.dir
 /opt/ros/hydro/share/HeightController/CMakeFiles/gazeboModel.dir
+/opt/ros/hydro/share/HeightController/CMakeFiles/gzb.dir
 /opt/ros/hydro/share/HeightController/CMakeFiles/rosbuild_clean-test-results.dir
 /opt/ros/hydro/share/HeightController/CMakeFiles/rosbuild_precompile.dir
 /opt/ros/hydro/share/HeightController/CMakeFiles/rosbuild_premsgsrvgen.dir

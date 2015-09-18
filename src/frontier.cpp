@@ -100,9 +100,9 @@ float frontier::angleDifference(const geometry_msgs::PoseStamped &start, const g
 		both_angle = goal_angle - start_angle;
 	}
 
-	// if(both_angle > M_PI){
-	//   both_angle = (M_PI - std::abs(start_angle)) + (M_PI - std::abs(goal_angle));
-	// }
+	 if(both_angle > M_PI){
+	   both_angle = (M_PI - std::abs(start_angle)) + (M_PI - std::abs(goal_angle));
+	 }
 
 	return both_angle;
 }

@@ -244,6 +244,19 @@ gazeboModel/fast:
 .PHONY : gazeboModel/fast
 
 #=============================================================================
+# Target rules for targets named gzb
+
+# Build rule for target.
+gzb: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gzb
+.PHONY : gzb
+
+# fast build rule for target.
+gzb/fast:
+	$(MAKE) -f CMakeFiles/gzb.dir/build.make CMakeFiles/gzb.dir/build
+.PHONY : gzb/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -460,6 +473,30 @@ src/gazeboModel.cpp.s:
 	$(MAKE) -f CMakeFiles/gazeboModel.dir/build.make CMakeFiles/gazeboModel.dir/src/gazeboModel.cpp.s
 .PHONY : src/gazeboModel.cpp.s
 
+src/gzbservice.o: src/gzbservice.cpp.o
+.PHONY : src/gzbservice.o
+
+# target to build an object file
+src/gzbservice.cpp.o:
+	$(MAKE) -f CMakeFiles/gzb.dir/build.make CMakeFiles/gzb.dir/src/gzbservice.cpp.o
+.PHONY : src/gzbservice.cpp.o
+
+src/gzbservice.i: src/gzbservice.cpp.i
+.PHONY : src/gzbservice.i
+
+# target to preprocess a source file
+src/gzbservice.cpp.i:
+	$(MAKE) -f CMakeFiles/gzb.dir/build.make CMakeFiles/gzb.dir/src/gzbservice.cpp.i
+.PHONY : src/gzbservice.cpp.i
+
+src/gzbservice.s: src/gzbservice.cpp.s
+.PHONY : src/gzbservice.s
+
+# target to generate assembly for a file
+src/gzbservice.cpp.s:
+	$(MAKE) -f CMakeFiles/gzb.dir/build.make CMakeFiles/gzb.dir/src/gzbservice.cpp.s
+.PHONY : src/gzbservice.cpp.s
+
 src/velcontroller.o: src/velcontroller.cpp.o
 .PHONY : src/velcontroller.o
 
@@ -499,6 +536,7 @@ help:
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... gazeboModel"
+	@echo "... gzb"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -523,6 +561,9 @@ help:
 	@echo "... src/gazeboModel.o"
 	@echo "... src/gazeboModel.i"
 	@echo "... src/gazeboModel.s"
+	@echo "... src/gzbservice.o"
+	@echo "... src/gzbservice.i"
+	@echo "... src/gzbservice.s"
 	@echo "... src/velcontroller.o"
 	@echo "... src/velcontroller.i"
 	@echo "... src/velcontroller.s"

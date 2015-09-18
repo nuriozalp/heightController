@@ -8,8 +8,10 @@
 #include "geometry_msgs/PoseWithCovarianceStamped.h"
 #include "frontier.h"
 #include <keyboard/Key.h>
-
+#include <std_msgs/Int8.h>
+#include <std_msgs/Float64.h>
 std::string modelName = "turtlebot";
+
 ros::ServiceClient gmscl;
 ros::ServiceClient gphspro;
 ros::ServiceClient client;
@@ -18,6 +20,8 @@ int counter = 0.2;
 
 // publisher handles
 ros::Publisher goal_pub;
+ros::Publisher distancePub;
+ros::Publisher anglePub;
 geometry_msgs::PoseStamped gazeboRobotPose;
 frontier *front;
 void keyboardCallback(const keyboard::KeyConstPtr& keyconsptr) {
@@ -135,7 +139,24 @@ void currentPosCallback(const geometry_msgs::PoseStampedConstPtr &slamPose)
 
  float angleDiff=front->angleDifference(slamRobotPose,gazeboRobotPose);
 
+
+ std_msgs::Float64  angle;
+ angle.data = angleDiff;
+ anglePub.publish(angle);
+
  ROS_INFO("the position value is angleDiff :%lf \n ",angleDiff);
+
+ float farkx=slamRobotPose.pose.position.x-gazeboRobotPose.pose.position.x;
+ float farky=slamRobotPose.pose.position.y-gazeboRobotPose.pose.position.y;
+
+ float distanceDiff=sqrt(pow(farkx,2)+pow(farky,2));
+ ROS_INFO("the position value is angleDiff :%lf \n ",distanceDiff);
+
+ std_msgs::Float64 distance;
+ distance.data = distanceDiff;
+ distancePub.publish(distance);
+
+
 }
 
 int main(int argc, char** argv) {
@@ -143,12 +164,15 @@ int main(int argc, char** argv) {
 	ros::init(argc, argv, "turtlebot");
 	front=new frontier();
 	ros::NodeHandle n;
-	ros::Subscriber subKey = n.subscribe("/keyboard/keydown", 10, keyboardCallback);
+	ros::Subscriber subKey  = n.subscribe("/keyboard/keydown", 10, keyboardCallback);
 
 	ros::Subscriber slamPse = n.subscribe("/slam_out_pose", 10, currentPosCallback);
 
 	// set up publisher
-	goal_pub = n.advertise<geometry_msgs::PoseStamped>("/gazeboModelPose", 10);
+	goal_pub    = n.advertise<geometry_msgs::PoseStamped>("/gazeboModelPose", 10);
+
+	distancePub = n.advertise<std_msgs::Float64>("/distanceDiff", 10);
+	anglePub    = n.advertise<std_msgs::Float64>("/angleDiff", 10);
 
 	gmscl = n.serviceClient<gazebo_msgs::GetModelState>("/gazebo/get_model_state");
 	gphspro = n.serviceClient<gazebo_msgs::GetPhysicsProperties>("/gazebo/get_physics_properties");
@@ -158,6 +182,10 @@ int main(int argc, char** argv) {
 	client.waitForExistence();
 
 
-	ros::spin();
+	ros::Rate r(10);
+		while (ros::ok()) {
+			ros::spinOnce();
+			r.sleep();
+		}
 	return 1;
 }
