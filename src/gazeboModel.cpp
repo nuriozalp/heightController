@@ -40,26 +40,27 @@ void keyboardCallback(const keyboard::KeyConstPtr& keyconsptr) {
 	geometry_msgs::Twist twist;
 
 	if (key == 273) {
-		twist.linear.x = 0.2;
-		pose.position.x = getmodelstate.response.pose.position.x + 0.1;
-		if (counter < 1)
-			counter += 0.1;
+		twist.linear.x = getmodelstate.response.twist.linear.x+0.05;
+		twist.angular.z=getmodelstate.response.twist.angular.z+0.05;
+		pose.position.x = getmodelstate.response.pose.position.x + 0.05;
+
 	} else if (key == 274) {
-		twist.linear.x = -0.2;
-		pose.position.x = getmodelstate.response.pose.position.x - 0.1;
-		counter -= 0.1;
+		twist.linear.x = getmodelstate.response.twist.linear.x-0.05;;
+		twist.angular.z=getmodelstate.response.twist.angular.z-0.05;
+		pose.position.x = getmodelstate.response.pose.position.x - 0.05;
 	} else {
 		pose.position.x = getmodelstate.response.pose.position.x;
 	}
-	twist.linear.y = 0.0;
-	twist.linear.z = 0.0;
-	twist.angular.x = 0.0 * carpan;
-	twist.angular.y = 0.0;
+
+
 	if (key == 275) {
-		pose.position.y = getmodelstate.response.pose.position.y + 0.1;
-		twist.angular.z = 0.1;
+		twist.linear.x = getmodelstate.response.twist.linear.x+0.05;
+				twist.angular.z=getmodelstate.response.twist.angular.z+0.05;
+		pose.position.y = getmodelstate.response.pose.position.y + 0.05;
 	} else if (key == 276) {
-		pose.position.y = getmodelstate.response.pose.position.y - 0.1;
+		pose.position.y = getmodelstate.response.pose.position.y - 0.05;
+		twist.linear.x = getmodelstate.response.twist.linear.x-0.05;;
+				twist.angular.z=getmodelstate.response.twist.angular.z-0.05;
 	} else {
 		pose.position.y = getmodelstate.response.pose.position.y;
 	}
@@ -144,13 +145,13 @@ void currentPosCallback(const geometry_msgs::PoseStampedConstPtr &slamPose)
  angle.data = angleDiff;
  anglePub.publish(angle);
 
- ROS_INFO("the position value is angleDiff :%lf \n ",angleDiff);
+ ROS_INFO("tangleDiff :%lf \n ",angleDiff);
 
  float farkx=slamRobotPose.pose.position.x-gazeboRobotPose.pose.position.x;
  float farky=slamRobotPose.pose.position.y-gazeboRobotPose.pose.position.y;
 
  float distanceDiff=sqrt(pow(farkx,2)+pow(farky,2));
- ROS_INFO("the position value is angleDiff :%lf \n ",distanceDiff);
+ ROS_INFO("distanceDiff :%lf \n ",distanceDiff);
 
  std_msgs::Float64 distance;
  distance.data = distanceDiff;
