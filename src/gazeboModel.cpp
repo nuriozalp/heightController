@@ -40,14 +40,14 @@ void keyboardCallback(const keyboard::KeyConstPtr& keyconsptr) {
 	geometry_msgs::Twist twist;
 
 	if (key == 273) {
-		twist.linear.x = getmodelstate.response.twist.linear.x+0.05;
-		twist.angular.z=getmodelstate.response.twist.angular.z+0.05;
-		pose.position.x = getmodelstate.response.pose.position.x + 0.05;
+		twist.linear.x = getmodelstate.response.twist.linear.x+0.15;
+		twist.angular.z=getmodelstate.response.twist.angular.z+0.15;
+		pose.position.x = getmodelstate.response.pose.position.x + 0.15;
 
 	} else if (key == 274) {
-		twist.linear.x = getmodelstate.response.twist.linear.x-0.05;;
-		twist.angular.z=getmodelstate.response.twist.angular.z-0.05;
-		pose.position.x = getmodelstate.response.pose.position.x - 0.05;
+		twist.linear.x = getmodelstate.response.twist.linear.x-0.15;;
+		twist.angular.z=getmodelstate.response.twist.angular.z-0.15;
+		pose.position.x = getmodelstate.response.pose.position.x - 0.15;
 	} else {
 		pose.position.x = getmodelstate.response.pose.position.x;
 	}
@@ -171,7 +171,7 @@ int main(int argc, char** argv) {
 
 	// set up publisher
 	goal_pub    = n.advertise<geometry_msgs::PoseStamped>("/gazeboModelPose", 10);
-
+	ros::Publisher keydownPublisher=n.advertise<keyboard::Key>("/keyboard/keydown", 10);;
 	distancePub = n.advertise<std_msgs::Float64>("/distanceDiff", 10);
 	anglePub    = n.advertise<std_msgs::Float64>("/angleDiff", 10);
 
@@ -183,10 +183,21 @@ int main(int argc, char** argv) {
 	client.waitForExistence();
 
 
-	ros::Rate r(10);
+	//ros::Rate r(11);
+	/*keyboard::Key keyboard;
+	int min=274;
+	int max=275;
 		while (ros::ok()) {
+			int key =min + (rand() % (int)(max - min + 1));
+			//int key=rand() % 276 + 273;
+
+			keyboard.code=key;
+            keyboard.header.stamp=ros::Time::now();
+			keydownPublisher.publish(keyboard);
+
 			ros::spinOnce();
 			r.sleep();
-		}
+		}*/
+	ros::spin();
 	return 1;
 }

@@ -108,7 +108,7 @@ int main(int argc, char **argv) {
 
 	//ros::Subscriber subScan = n.subscribe("/scan", 10, scanCallback);
 
-	ros::Rate r(10);
+	ros::Rate r(5);
 	while (ros::ok()) {
 		ros::spinOnce();
 		r.sleep();
